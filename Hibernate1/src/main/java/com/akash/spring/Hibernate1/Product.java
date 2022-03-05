@@ -1,0 +1,46 @@
+package com.akash.spring.Hibernate1;
+
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Product {
+
+	@Id
+	private int id;
+	private String name;
+
+	public int getId() {
+		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + "]";
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Product(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
+	public Product() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+}
